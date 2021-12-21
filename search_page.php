@@ -38,6 +38,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             require "./DBhandlers/connectionDB_products.php";
             if ($_POST['type'] === "byname") 
             {
+                echo "<pre>" . $_POST['productname'] . "</pre>";
                 $sql_query_name = "SELECT * FROM products WHERE name = '" . $POST_['productname'] . "'";
                 $result = mysqli_query($conn, $sql_query_name);
                 $row = mysqli_fetch_assoc($result);

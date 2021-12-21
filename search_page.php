@@ -32,11 +32,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 
     <?php
         if (isset($_POST["search-submit"])) {
-            // Show the found products
-            echo "<pre>Button was clicked!</pre>";
-        }
-
-        if (!empty($_REQUEST['productname']) || !empty($_REQUEST['productid'])) {
             if (!isset($_POST['type'])) {
                 echo "<pre>Radio button was not clicked!</pre>";
             }
@@ -97,7 +92,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 
     <div class="go-back-container">
         <?php 
-        if (isset($_SESSION['role']) {
+        if (isset($_SESSION['role'])) {
             $role = $_SESSION['role'];
         }   
         if ($role === "clerk") {

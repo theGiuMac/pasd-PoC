@@ -22,7 +22,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     <div class="search-container">
         <form action="" method="post">
             Enter product name: <input type="text" name="productname" placeholder="Name of product"><br/>
-            Enter product id: <input type="number" name="productid" value="0" placeholder="Id of product" min="1" step="1"><br/>
+            Enter product id: <input type="number" name="productid" value="0" placeholder="Id of product" min="0" step="1"><br/>
             <button type="submit" name="search-submit">Search</button>
         </form>
     </div>

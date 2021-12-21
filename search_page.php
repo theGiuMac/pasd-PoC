@@ -40,7 +40,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             {
                 $productname = $_POST['productname'];
                 $sql_query_name = "SELECT * FROM products WHERE name = '" . $productname . "'";
-                echo "<pre>" . $sql_query_name . "</pre>";
                 $result = mysqli_query($conn, $sql_query_name);
                 $row = mysqli_fetch_array($result);
 
@@ -67,7 +66,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     <?php
             } else if ($_POST['type'] === 'byid') 
             {
-                $sql_query_id = "SELECT * FROM products WHERE id = '" . $POST_['productid'] . "'";
+                $productid = $_POST['productid'];
+                $sql_query_id = "SELECT * FROM products WHERE id = " . $productid;
                 $result = mysqli_query($conn, $sql_query_id);
                 $row = mysqli_fetch_assoc($result);   
     ?>

@@ -39,6 +39,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             if ($_POST['type'] === "byname") 
             {
                 $sql_query_name = "SELECT * FROM products WHERE name = '" . $POST_['productname'] . "'";
+                echo "<pre>" . $sql_query_name . "</pre>";
                 $result = mysqli_query($conn, $sql_query_name);
                 $row = mysqli_fetch_array($result);
 

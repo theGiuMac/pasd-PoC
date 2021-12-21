@@ -207,5 +207,14 @@ img {
     box-shadow: 3px 3px 8px 0 #000;
 }
 
+.product-table {
 
+}
+
+input[type=radio],
+input.radio {
+    float: left;
+    clear: none;
+    margin: 2px 0 0 2px;
+}
 

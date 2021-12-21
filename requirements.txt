@@ -1,0 +1,17 @@
+# Install php 8.0 from command line (with apt), if it doesn't work then follow a guide online for
+# adding the sources repository
+sudo apt-get install php8.0
+
+# Find a guide online for installing phpmyadmin
+phpmyadmin
+
+# Create a user with all privileges in your locally installed mariaDB system
+
+# Modify all the connectionDB_*.php files with proper username and password
+
+# Log-in at localhost/phpmyadmin with your mariaDB user credentials
+
+# Import the sql file in the folder, it creates the DATABASES and INSERT a few placeholder data values
+
+
+

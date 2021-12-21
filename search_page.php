@@ -13,12 +13,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 </head>
 
 <body>
-    <p>This is the page that allows for searching the amount of each product in both
-        the warehouse and the store, on display.
-        You can search products by id or by name, using the following interface, the
-        resulting products and related information will be shown further down the page.
-    </p>
-
     <div class="search-container">
         <form action="" method="post">
             Enter product name: <input type="text" name="productname" placeholder="Name of product"><br/>

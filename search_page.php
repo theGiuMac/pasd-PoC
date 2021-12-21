@@ -65,7 +65,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             {
                 $productid = $_POST['productid'];
                 $sql_query_id = "SELECT * FROM products WHERE id = '" . $productid . "'";
-                echo "<pre>" . $sql_query_id . "</pre>";
+                echo "<pre> $sql_query_id </pre>";
                 $result = mysqli_query($conn, $sql_query_id);
                 $row = mysqli_fetch_assoc($result);   
     ?>

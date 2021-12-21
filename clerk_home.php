@@ -12,11 +12,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 </head>
 
 <body>
-    <div class="button-fancy-container">
-        <form action="redirect_to_search_page.php" method="post">
+    <form action="redirect_to_search_page.php" method="post">
+        <div class="center">
             <button class="button-fancy" type="submit">Search products</button>
-        </form>
-    </div>
+        </div>
+    </form>
 
     <br/>
     <br/>

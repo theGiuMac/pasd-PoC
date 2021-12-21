@@ -41,26 +41,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
                 $sql_query_name = "SELECT * FROM products WHERE name = '" . $productname . "'";
                 $result = mysqli_query($conn, $sql_query_name);
                 $row = mysqli_fetch_array($result);
-    ?>
-                <div class="product-table">
-                    <table>
-                        <tr>
-                            <th>Product name</th>
-                            <th>Product id</th>
-                            <th>Price in euros</th>
-                            <th>Quantity in store</th>
-                            <th>Quantity in warehouse</th>
-                        </tr>
-                        <tr>
-                            <td><?php echo $row['name']; ?></td>
-                            <td><?php echo $row['id']; ?></td>
-                            <td><?php echo $row['price']; ?></td>
-                            <td><?php echo $row['quantity_display']; ?></td>
-                            <td><?php echo $row['quantity_warehouse']; ?></td>
-                        </tr>
-                    </table>
-                </div>
-    <?php
             }
             if (isset($_POST['productid'])) 
             {
@@ -70,6 +50,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
                 echo "<pre> $sql_query_id </pre>";
                 $result = mysqli_query($conn, $sql_query_id);
                 $row = mysqli_fetch_assoc($result);   
+            }
     ?>
                 <div class="product-table">
                     <table>
@@ -90,7 +71,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
                     </table>
                 </div>
     <?php
-            }
         } 
     ?>
 

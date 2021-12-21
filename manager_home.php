@@ -16,6 +16,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     <br>
     <br>
     <form action="issue_order.php" method="post">
+    <div class="issue-order-container">
         <h2>Issue Orders</h2>
         <label>Products</label>
         <div class="container">
@@ -50,6 +51,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             ?>
         </div>
         <button type="submit">Issue Order</button>
+    </div>
     </form>
     <br>
     <br>

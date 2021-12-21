@@ -24,7 +24,7 @@ body {
 
 form {
     
-    width: 500px;
+    width: 600px;
 
     border: 3px solid rgb(177,142,142);
 
@@ -206,4 +206,6 @@ img {
     border-radius: 5px;
     box-shadow: 3px 3px 8px 0 #000;
 }
+
+
 

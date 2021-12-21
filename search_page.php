@@ -52,11 +52,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
                             <th>Quantity in warehouse</th>
                         </tr>
                         <tr>
-                            <td><?php echo $row['name']?></td>
-                            <td><?php echo $row['id']?></td>
-                            <td><?php echo $row['price']?></td>
-                            <td><?php echo $row['quantity_display']?></td>
-                            <td><?php echo $row['quantity_warehouse']?></td>
+                            <td><?php echo $row['name']; ?></td>
+                            <td><?php echo $row['id']; ?></td>
+                            <td><?php echo $row['price']; ?></td>
+                            <td><?php echo $row['quantity_display']; ?></td>
+                            <td><?php echo $row['quantity_warehouse']; ?></td>
                         </tr>
                     </table>
                 </div>

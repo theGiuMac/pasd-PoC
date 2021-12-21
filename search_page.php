@@ -23,8 +23,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
         <form action="" method="post">
             Enter product name: <input type="text" name="productname" placeholder="Name of product"><br/>
             Enter product id: <input type="number" name="productid" placeholder="Id of product" min="1" step="1"><br/>
-            <input type="radio" value="byname" name="type">By Name<br/>
-            <input type="radio" value="byid" name="type">By ID<br/>
             <button type="submit" name="search-submit">Search</button>
         </form>
     </div>
@@ -32,18 +30,13 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 
     <?php
         if (isset($_POST["search-submit"])) {
-            if (!isset($_POST['type'])) {
-                echo "<pre>Radio button was not clicked!</pre>";
-            }
             require "./DBhandlers/connectionDB_products.php";
-            if ($_POST['type'] === "byname") 
+            if (isset($_POST['productname'])) 
             {
                 $productname = $_POST['productname'];
                 $sql_query_name = "SELECT * FROM products WHERE name = '" . $productname . "'";
                 $result = mysqli_query($conn, $sql_query_name);
                 $row = mysqli_fetch_array($result);
-
-                echo "<pre>" . $row['name'] . "</pre>";
     ?>
                 <div class="product-table">
                     <table>
@@ -64,7 +57,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
                     </table>
                 </div>
     <?php
-            } else if ($_POST['type'] === 'byid') 
+            } else if (isset($_POST['productid'])) 
             {
                 $productid = $_POST['productid'];
                 $sql_query_id = "SELECT * FROM products WHERE id = " . $productid;

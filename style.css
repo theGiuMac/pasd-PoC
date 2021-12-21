@@ -51,7 +51,7 @@ label {
 }
 
 button {
-    float: center;
+    float: right;
     background: rgb(35, 174, 202);
     padding: 10px 15px;
     color: #fff;

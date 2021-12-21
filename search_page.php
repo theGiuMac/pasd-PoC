@@ -40,6 +40,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             {
                 $sql_query_name = "SELECT * FROM products WHERE name = '" . $POST_['productname'] . "'";
                 $result = mysqli_query($conn, $sql_query_name);
+                if (!$result) {
+                    echo "<pre>Query not executed</pre>";
+                }
                 $row = mysqli_fetch_assoc($result);
 
                 echo "<pre>" . $row['name'] . "</pre>";

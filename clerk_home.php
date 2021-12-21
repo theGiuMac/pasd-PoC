@@ -13,10 +13,14 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 
 <body>
     <div class="button-fancy-container">
-        <form action="redirect_to_search_page.php" method="post">
-            <button class="button-fancy" type="submit">Search products</button>
-        </form>
+        <button class="button-fancy" name="search-submit" type="submit">Search products</button>
     </div>
+
+    <?php 
+    if (isset($_POST['search-submit'])) {
+        require "./redirect_to_search_page.php";
+    }
+    ?>
 
 
     <br/>

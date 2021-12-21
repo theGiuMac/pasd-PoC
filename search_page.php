@@ -45,15 +45,13 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             if ($_POST['productid'] > 0) 
             {
                 $productid = $_POST['productid'];
-                echo "<pre>" . $productid . "</pre>";
                 $sql_query_id = "SELECT * FROM products WHERE id = '" . $productid . "'";
-                echo "<pre> $sql_query_id </pre>";
                 $result = mysqli_query($conn, $sql_query_id);
                 $row = mysqli_fetch_assoc($result);   
             }
     ?>
-                <div class="product-table">
-                    <table>
+                <table class="product-table">
+                    <thead>    
                         <tr>
                             <th>Product name</th>
                             <th>Product id</th>
@@ -61,6 +59,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
                             <th>Quantity in store</th>
                             <th>Quantity in warehouse</th>
                         </tr>
+                    </thead>
+                    <tbody>
                         <tr>
                             <td><?php echo $row['name']?></td>
                             <td><?php echo $row['id']?></td>
@@ -68,8 +68,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
                             <td><?php echo $row['quantity_display']?></td>
                             <td><?php echo $row['quantity_warehouse']?></td>
                         </tr>
-                    </table>
-                </div>
+                    </tbody>
+                </table>
     <?php
         } 
     ?>

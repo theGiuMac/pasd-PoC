@@ -102,6 +102,12 @@ a:hover {
     overflow-x: auto;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
 
 
 .container .product {

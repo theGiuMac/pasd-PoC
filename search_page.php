@@ -27,6 +27,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
         </form>
     </div>
 
+    <br/>
+    <br/>
+    <br/>
+    <br/>
 
     <?php
         if (isset($_POST["search-submit"])) {
@@ -60,7 +64,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             } else if (isset($_POST['productid'])) 
             {
                 $productid = $_POST['productid'];
-                $sql_query_id = "SELECT * FROM products WHERE id = " . $productid;
+                $sql_query_id = "SELECT * FROM products WHERE id = '" . $productid . "'";
                 $result = mysqli_query($conn, $sql_query_id);
                 $row = mysqli_fetch_assoc($result);   
     ?>
@@ -86,6 +90,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             }
         } 
     ?>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
 
     <div class="go-back-container">
         <?php 

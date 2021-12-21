@@ -61,7 +61,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
                     </table>
                 </div>
     <?php
-            } else if (isset($_POST['productid'])) 
+            }
+            if (isset($_POST['productid'])) 
             {
                 $productid = $_POST['productid'];
                 echo "<pre>" . $productid . "</pre>";

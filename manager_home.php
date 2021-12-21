@@ -38,7 +38,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
         <label>Products</label>
         <div class="container">
             <?php
-                require "connectionDB_products.php";
+                require "./DBhandlers/connectionDB_products.php";
                 $sql_query = "SELECT * FROM products";
                 $result = mysqli_query($conn, $sql_query);
                 //while ($row = $result->fetch_array()) {

@@ -1,1 +1,3 @@
 *DB*.php
+connectionDB_products.php
+connectionDB_users.php

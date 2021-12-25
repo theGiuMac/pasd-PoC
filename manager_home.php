@@ -55,6 +55,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     </form>
     <br>
     <br>
+    <a href="add_user_page.php"> Add a user </a>
+    <br>
     <a href="logout.php">Logout</a>
 </body>
 

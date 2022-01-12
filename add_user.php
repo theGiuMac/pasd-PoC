@@ -9,8 +9,9 @@ $roles = array("manager", "clerk", "cashier");
 require "./DBhandlers/connectionDB_users.php";
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
-    
-    function validate($data) {
+
+    function validate($data)
+    {
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
@@ -23,7 +24,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $password = hash('sha256', $password);
 
 
-    
+
     if (empty($username)) {
         header("Location: add_user_page.php?error=Username is required");
         exit();
@@ -36,11 +37,10 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     } else if (!in_array($role, $roles)) {
         header("Location: add_user_page.php?error=Role can only be $roles");
         exit();
-    } else if (mysqli_num_rows(mysqli_query($conn,"SELECT * FROM users WHERE username='$username'")) >= 1) {
+    } else if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM users WHERE username='$username'")) >= 1) {
         header("Location: add_user_page.php?error=User Name '$username' already exists");
         exit();
-    }
-    else {
+    } else {
         $sql_query = "INSERT INTO users (username, password, role) VALUES ('$username', '$password', '$role')";
         if ($conn->query($sql_query) == TRUE) {
             header("Location: add_user_page.php?error='$username' created successfully");
@@ -53,7 +53,3 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     header("Location: manager_home.php");
     exit();
 }
-
-
-
-?>

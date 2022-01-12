@@ -18,7 +18,7 @@ body {
 .login-container,
 .search-container {    
     width: 600px;
-    border: 3px solid rgb(177,142,142);
+    border: 3px solid rgb(255, 0, 0);
     padding: 20px;
     /* background: linear-gradient(rgb(173,216,230), silver); */
     background-color : #000000;

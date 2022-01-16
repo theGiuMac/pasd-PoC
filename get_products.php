@@ -14,4 +14,3 @@
         $result = json_decode($response, true);
         return $result;
     }
-?>

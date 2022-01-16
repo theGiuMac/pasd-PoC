@@ -4,7 +4,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 ?>
 
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
 
     <head>
         <title>Add User</title>
@@ -22,21 +22,22 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
                     <?php if (isset($_GET['error'])) { ?>
                         <p class="error"><?php echo $_GET['error']; ?></p>
                     <?php } ?>
-                    <label>Username</label>
-                    <input type="text" name="username" placeholder="Username"><br>
-                    <label>Password</label>
-                    <input type="password" name="password" placeholder="Password"><br>
-                    <label>Role</label>
-                    <input type="text" name="role" placeholder="role"><br>
+                    <label for="usernameField">Username</label>
+                    <input type="text" id="usernameField" name="username" placeholder="Username"><br>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password"><br>
+                    <label for="role">Role</label>
+                    <input type="text" id="role" name="role" placeholder="role"><br>
                     <button type="submit">Add user</button>
                 </div>
 
             </form>
         </div>
-        </form>
         <br>
         <br>
         <a href="manager_home.php">Home Page</a>
+        <br>
+        <a href="logout.php">Logout</a>
     </body>
 
     </html>

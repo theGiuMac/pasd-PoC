@@ -6,7 +6,6 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
-
 }
 
 *{
@@ -23,6 +22,7 @@ body {
     /* background: linear-gradient(rgb(173,216,230), silver); */
     background-color : #000000;
     border-radius: 20px;
+
 }
 
 h2 {
@@ -111,6 +111,7 @@ a:hover {
 
 .container .product {
     margin-right: 50px;
+    margin-top: 10px;
 }
 
 .container::-webkit-scrollbar {

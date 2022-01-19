@@ -45,11 +45,27 @@ CREATE TABLE `products` (
 INSERT INTO `products` (`id`, `name`, `price`, `quantity_display`, `quantity_warehouse`, `image_path`) VALUES
 (1, 'Milk', 1.5, 0, 5, ''),
 (2, 'Breadcrumbs', 0.45, 25, 50, ''),
-(3, 'corn chips', 1.25, 15, 25, ''),
-(4, 'deodorant', 2.75, 30, 60, ''),
-(5, 'orange juice', 2.25, 45, 30, '');
+(3, 'Corn chips', 1.25, 15, 25, ''),
+(4, 'Deodorant', 2.75, 30, 60, ''),
+(5, 'Orange juice', 2.25, 45, 30, ''),
+(6, 'Chocomel', 1.75, 10, 30, ''),
+(7, 'Heineken', 2, 12, 40, ''),
+(8, 'Cheeze', 1.25, 5, 10, ''),
+(9, 'Ice cream', 4,75, 10, 50, ''),
+(10, 'Orange', 0.99, 15, 0, ''),
+(11, 'Beef', 7, 5, 6, ''),
+(12, 'Pork', 3, 6, 7, ''),
+(13, 'Chicken Breast', 6.25, 7, 8, ''),
+(14, 'Protein Shake', 11.25, 5, 10, ''),
+(15, 'Spaghetti', 1.99, 10, 20, ''),
+(16, 'Eggs', 3.25, 10, 20, ''),
+(17, 'Water', 1.25, 15, 40, ''),
+(18, 'Salad', 4.99, 10, 20, ''),
+(19, 'Toilet paper', 2.25, 20, 50, ''),
+(20, 'Pet feed', 10.99, 20, 50, '');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+

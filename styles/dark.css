@@ -15,6 +15,7 @@ body {
 
 .issue-order-container,
 .view-order-container,
+.view-deliveries-container,
 .login-container,
 .search-container {
     width: 600px;
@@ -110,7 +111,7 @@ a:hover {
     width: 350px;
 }
 
-.product, .order {
+.product, .order, .delivery {
     border: solid 1px #dddddd;
     border-radius: 5px;
     margin: 3px;

@@ -1,8 +1,8 @@
 <?php
-function getOrders()
+function getDeliveries()
 {
     // Server url
-    $url = "https://rethink-supplier.herokuapp.com/order/";
+    $url = "https://rethink-supplier.herokuapp.com/delivery/";
     $apiKey = 'eec0d644e253677eebedf079406bad4130683b53';
     $headers = array('Authorization: Token ' . $apiKey);
     // Send reqest to server
@@ -26,7 +26,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     <html>
 
     <head>
-        <title>Orders</title>
+        <title>Deliveries</title>
         <link rel="stylesheet" type="text/css" href="./styles/dark.css">
     </head>
 
@@ -35,23 +35,23 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     <br>
     <br>
 
-    <div class="view-order-container">
-        <h2>Orders</h2>
+    <div class="view-deliveries-container">
+        <h2>Deliveries</h2>
 
         <div class="container">
             <?php
-            $orders = getOrders();
+            $deliveries = getDeliveries();
             $count = 0;
             ?>
             <?php
-            while ($count != sizeof($orders)) {
+            while ($count != sizeof($deliveries)) {
                 ?>
-                <div class="order">
+                <div class="delivery">
                     <div class="limit-title">
                         <?php
-                        echo "<h1> Order ID:" . $orders[$count]['id'] . "</h1><br>";
-                        echo "<p> Buyer: " . $orders[$count]['buyer'] . "</p><br>";
-                        echo "<p> Processed: " . ($orders[$count]['is_processed'] == false ? "No" : "Yes") . "</p><br>";
+                        echo "<h1> Delivery ID:" . $deliveries[$count]['id'] . "</h1><br>";
+                        echo "<p> Delivery Date: " . $deliveries[$count]['date_time'] . "</p><br>";
+                        echo "<p> Order ID: " . $deliveries[$count]['order'] . "</p><br>";
                         ?>
                     </div>
                 </div>

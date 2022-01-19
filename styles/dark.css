@@ -1,6 +1,6 @@
 body {
     /* background: linear-gradient(black, white); */
-    background : black;
+    background: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,19 +8,20 @@ body {
     flex-direction: column;
 }
 
-*{
+* {
     font-family: "Fira Code";
     box-sizing: padding-box;
 }
 
 .issue-order-container,
+.view-order-container,
 .login-container,
-.search-container {    
+.search-container {
     width: 600px;
     border: 3px solid rgb(255, 0, 0);
     padding: 20px;
     /* background: linear-gradient(rgb(173,216,230), silver); */
-    background-color : #000000;
+    background-color: #000000;
     border-radius: 20px;
 
 }
@@ -31,7 +32,7 @@ h2 {
     color: #ffffff;
 }
 
-input {    
+input {
     display: block;
     border: 2px solid #ccc;
     width: 50%;
@@ -48,6 +49,7 @@ label {
 }
 
 button {
+    cursor: pointer;
     float: right;
     background: #000000;
     padding: 10px 15px;
@@ -108,8 +110,13 @@ a:hover {
     width: 350px;
 }
 
+.product, .order {
+    border: solid 1px #dddddd;
+    border-radius: 5px;
+    margin: 3px;
+}
 
-.container .product {
+.container .product .order {
     margin-right: 50px;
     margin-top: 10px;
 }

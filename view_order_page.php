@@ -1,0 +1,96 @@
+<?php
+
+include "get_products.php";
+
+function getOrderDetails($order_id)
+{
+    // Server url
+    $url = "https://rethink-supplier.herokuapp.com/order/" . $order_id;
+    return performGET($url)['orderlines'];
+}
+
+function validate($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    return htmlspecialchars($data);
+}
+
+function getProductById($products, $id)
+{
+    $count = 0;
+    while ($count != $products) {
+        if ($id == $products[$count]['id']) {
+            return $products[$count]['name'];
+        }
+        $count++;
+    }
+    return null;
+}
+
+?>
+<?php
+session_start();
+if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
+    $orderId = validate($_POST['order_id']);
+    $products = getProducts();
+    $orderDetail = getOrderDetails($orderId);
+    ?>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <body>
+    <h1>Hello, <?php echo $_SESSION['username']; ?></h1>
+    <br>
+    <br>
+
+
+    <div class="view-order-container">
+        <?php echo "<h2>Detail Of Order: " . $orderId . "</h2>" ?>
+        <?php
+        $count = 1;
+        while ($count != sizeof($orderDetail) + 1) {
+            echo "<details style='color:white;'>";
+            echo "<summary>Item Number " . $count . "</summary>";
+            echo "<span>
+                            <div>
+                                <p> Products's Name: " . getProductById($products, $orderDetail[$count - 1]['product']) . "</p>
+                                <p>  Amount: " . $orderDetail[$count - 1]['nr_of_products'] . "</p>
+                            </div>
+                        </span>";
+            echo "</details>";
+            $count++;
+        }
+        ?>
+        <div class="container">
+        </div>
+        <form method="post" action="confirm_order.php">
+            <?php echo "<input style = 'display:none' name='order_id' value=" . $orderId . "/>" ?>
+            <button type="submit">Confirm Order</button>
+        </form>
+    </div>
+
+    <br>
+    <br>
+
+    <a href="add_user_page.php"> Add a user </a>
+    <a href="manager_home.php">Manager Home Page</a>
+    <a href="view_deliveries_page.php">View Deliveries</a>
+    <br>
+    <a href="logout.php">Logout</a>
+    </body>
+
+    <head>
+        <title>Order Detail</title>
+        <link rel="stylesheet" type="text/css" href="./styles/dark.css">
+    </head>
+
+    </html>
+
+    <?php
+} else {
+    header("Location: ../index.php");
+    exit();
+}
+?><?php

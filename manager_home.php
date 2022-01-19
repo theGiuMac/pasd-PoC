@@ -4,7 +4,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     ?>
 
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
 
     <head>
         <title>Manager Homepage</title>

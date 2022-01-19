@@ -1,17 +1,17 @@
-<?php 
+<?php
 session_start();
 if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
-?>
+    ?>
 
-<!DOCTYPE html>
-<html>
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <title>Clerk Homepage</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+    <head>
+        <title>Clerk Homepage</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
 
-<body>
+    <body>
     <form action="redirect_to_search_page.php" method="post">
         <div class="center">
             <button class="button-fancy" type="submit">Search products</button>
@@ -25,10 +25,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 
     <a href="logout.php">Logout</a>
 
-</body>
-</html>
+    </body>
+    </html>
 
-<?php
+    <?php
 } else {
     header("Location: index.php");
     exit();

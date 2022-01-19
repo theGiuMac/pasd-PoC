@@ -12,7 +12,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     $orderId = validate($_POST['order_id']);
     ?>
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
 
     <head>
         <title>Manager Homepage</title>

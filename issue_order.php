@@ -20,7 +20,7 @@ $count = 0;
 $url = "https://rethink-supplier.herokuapp.com/orderline/";
 $apiKey = 'eec0d644e253677eebedf079406bad4130683b53';
 $headers = array('Authorization: Token ' . $apiKey);
-// Send reqest to server
+
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);

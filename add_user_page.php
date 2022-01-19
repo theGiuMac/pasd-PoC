@@ -31,7 +31,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Password"><br>
                 <label for="role">Role</label>
-                <select name="role">
+                <select id="role" name="role">
                     <?php
                     foreach ($roles as $role => $name) {
                         echo "<option value=" . $role . ">" . $name . "</option>";

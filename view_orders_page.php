@@ -3,17 +3,25 @@ function getOrders()
 {
     // Server url
     $url = "https://rethink-supplier.herokuapp.com/order/";
+    return performGET($url);
+}
+
+/**
+ * @param $url
+ * @return mixed
+ */
+function performGET($url)
+{
     $apiKey = 'eec0d644e253677eebedf079406bad4130683b53';
     $headers = array('Authorization: Token ' . $apiKey);
-    // Send reqest to server
+    // Send request to server
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
     // Get response
     $response = curl_exec($ch);
     // Decode
-    $result = json_decode($response, true);
-    return $result;
+    return json_decode($response, true);
 } ?>
 
 
@@ -23,7 +31,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     ?>
 
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
 
     <head>
         <title>Orders</title>
@@ -71,6 +79,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 
     <br>
     <br>
+
     <a href="add_user_page.php"> Add a user </a>
     <a href="manager_home.php">Manager Home Page</a>
     <a href="view_deliveries_page.php">View Deliveries</a>

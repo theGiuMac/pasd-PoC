@@ -1,4 +1,3 @@
 <?php
-    header("Location: search_page.php");
-    exit();
-?>
+header("Location: search_page.php");
+exit();

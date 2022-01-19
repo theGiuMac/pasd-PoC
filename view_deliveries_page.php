@@ -1,5 +1,7 @@
 <?php
-include "view_orders_page.php";
+
+include "get_products.php";
+
 function getDeliveries()
 {
     // Server url

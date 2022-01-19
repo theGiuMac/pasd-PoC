@@ -43,15 +43,18 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
                     <div class="limit-title">
                         <?php
                         echo "<h1> Order ID:" . $orders[$count]['id'] . "</h1><br>";
-                        echo "<form action='issue_order_page.php' method='post'><input style = 'display:none' name='order_id' value=" . $orders[$count]['id'] . ">";
+                        echo "<form action='view_or_issue.php' method='post'><input style = 'display:none' name='order_id' value=" . $orders[$count]['id'] . ">";
                         echo "<p> Buyer: " . $orders[$count]['buyer'] . "</p><br>";
                         echo "<p> Processed: " . ($orders[$count]['is_processed'] == false ? "No" : "Yes") . "</p><br>";
                         echo($orders[$count]['is_processed'] == false ?
-                            "<button type='submit'>Add Products</button> </form>"
+                            "<button type='submit' name='issue'>Add Products</button>"
                             :
                             null
                         );
                         ?>
+                        <button type="submit" name='view'>See Details</button>
+                        </form>
+                        ;
                     </div>
                 </div>
                 <?php

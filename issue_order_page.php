@@ -8,6 +8,7 @@ function validate($data)
     return htmlspecialchars($data);
 }
 
+
 if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     $orderId = validate($_POST['order_id']);
     ?>

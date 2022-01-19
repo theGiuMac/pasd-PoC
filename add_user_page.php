@@ -9,6 +9,18 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     <!DOCTYPE html>
     <html lang="en">
 
+        <!-- Side Navigation -->
+        <div class="sidenav">
+        <a href="manager_home.php">Manager Homepage</a>
+        <hr>
+        <a href="view_deliveries_page.php">View Deliveries</a>
+        <hr>
+        <a href="view_orders_page.php">View Orders</a>
+        <hr>
+        <a href="logout.php">Logout</a>
+        <hr>
+        </div>
+
     <head>
         <title>Add User</title>
         <link rel="stylesheet" type="text/css" href="./styles/dark.css">

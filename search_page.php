@@ -6,6 +6,21 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 <!DOCTYPE html>
 <html>
 
+        //TODO
+        <!-- Side Navigation -->
+        <div class="sidenav">
+        <a href="manager_home.php">Manager Homepage</a>
+        <hr>
+        <a href="view_deliveries_page.php">View Deliveries</a>
+        <hr>
+        <a href="add_user_page.php"> Add a user </a>
+        <hr>
+        <a href="logout.php">Logout</a>
+        <hr>
+        </div>
+
+<div class="main">
+
 
 <head>
     <title>Search page</title>
@@ -92,11 +107,12 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 
 </body>
 
+</div>
+
           <footer>
           <p>Authors: G & M & S</p>
           <p><a href="mailto:maccarigiulio@pm.me">Contact us</a></p>
           </footer>
-
 
 
 </html>

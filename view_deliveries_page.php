@@ -18,6 +18,20 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     <!DOCTYPE html>
     <html lang="en">
 
+        <!-- Side Navigation -->
+        <div class="sidenav">
+        <a href="manager_home.php">Manager Homepage</a>
+        <hr>
+        <a href="view_orders_page.php">View Orders</a>
+        <hr>
+        <a href="add_user_page.php"> Add a user </a>
+        <hr>
+        <a href="logout.php">Logout</a>
+        <hr>
+        </div>
+
+    <div class="main">
+
     <head>
         <title>Deliveries</title>
         <link rel="stylesheet" type="text/css" href="./styles/dark.css">
@@ -56,14 +70,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
         </div>
     </div>
 
-    <br>
-    <br>
-    <a href="add_user_page.php"> Add a user </a>
-    <a href="manager_home.php">Manager Home Page</a>
-    <a href="view_orders_page.php">View Orders</a>
-    <br>
-    <a href="logout.php">Logout</a>
+
     </body>
+
+    </div>
 
     </html>
 

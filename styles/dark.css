@@ -13,6 +13,16 @@ body {
     box-sizing: padding-box;
 }
 
+.logout {
+    color: #CE2222;
+    background-color: #FDFCFC;
+}
+
+.homepage {
+    width: 900px;
+    height: 600px;
+}
+
 /* The sidebar menu */
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
@@ -21,7 +31,7 @@ body {
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #255;
+  background-color: #D6E2DA;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
 }

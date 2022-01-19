@@ -50,8 +50,14 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
                     <div class="limit-title">
                         <?php
                         echo "<h1> Order ID:" . $orders[$count]['id'] . "</h1><br>";
+                        echo "<form action='issue_order_page.php' method='post'><input style = 'display:none' name='order_id' value=" . $orders[$count]['id'] . ">";
                         echo "<p> Buyer: " . $orders[$count]['buyer'] . "</p><br>";
                         echo "<p> Processed: " . ($orders[$count]['is_processed'] == false ? "No" : "Yes") . "</p><br>";
+                        echo($orders[$count]['is_processed'] == false ?
+                            "<button type='submit'>Add Products</button> </form>"
+                            :
+                            null
+                        );
                         ?>
                     </div>
                 </div>
@@ -67,7 +73,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     <br>
     <a href="add_user_page.php"> Add a user </a>
     <a href="manager_home.php">Manager Home Page</a>
-    <a href="view_deliveries.php">View Deliveries</a>
+    <a href="view_deliveries_page.php">View Deliveries</a>
     <br>
     <a href="logout.php">Logout</a>
     </body>

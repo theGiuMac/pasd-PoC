@@ -25,6 +25,13 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     <a href="logout.php">Logout</a>
     </body>
 
+                                                         <footer>
+                                                         <p>Authors: G & M & S</p>
+                                                         <p><a href="mailto:maccarigiulio@pm.me">Contact us</a></p>
+                                                         </footer>
+
+
+
     </html>
 
     <?php

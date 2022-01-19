@@ -22,9 +22,9 @@
 </form>
 </body>
 
-<footer>
-    <small>This website is designed and created as a prototype.
-        It does not intend to be a final product.</small>
-</footer>
+     <footer>
+     <p>Authors: G & M & S</p>
+     <p><a href="mailto:maccarigiulio@pm.me">Contact us</a></p>
+     </footer>
 
 </html>

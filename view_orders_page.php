@@ -17,14 +17,29 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 
     <!DOCTYPE html>
     <html lang="en">
+    <link rel="stylesheet" type="text/css" href="./styles/dark.css">
+
+    <!-- Side Navigation -->
+    <div class="sidenav">
+        <a href="manager_home.php">Manager Homepage</a>
+        <hr>
+        <a href="view_deliveries_page.php">View Deliveries</a>
+        <hr>
+        <a href="add_user_page.php"> Add a user </a>
+        <hr>
+        <a href="logout.php">Logout</a>
+        <hr>
+    </div>
+
+    <h1>Hello, <?php echo $_SESSION['username']; ?></h1>
+
+    <div class="main">
 
     <head>
         <title>Orders</title>
-        <link rel="stylesheet" type="text/css" href="./styles/dark.css">
     </head>
 
     <body>
-    <h1>Hello, <?php echo $_SESSION['username']; ?></h1>
     <br>
     <br>
 
@@ -64,16 +79,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             ;
         </div>
     </div>
-
-    <br>
-    <br>
-
-    <a href="add_user_page.php"> Add a user </a>
-    <a href="manager_home.php">Manager Home Page</a>
-    <a href="view_deliveries_page.php">View Deliveries</a>
-    <br>
-    <a href="logout.php">Logout</a>
-    </body>
+    </div>
 
     </html>
 

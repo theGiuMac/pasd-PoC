@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 ?>
@@ -29,23 +29,23 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     <?php
         if (isset($_POST["search-submit"])) {
             require "./DBhandlers/connectionDB_products.php";
-            if (isset($_POST['productname'])) 
+            if (isset($_POST['productname']))
             {
                 $productname = $_POST['productname'];
                 $sql_query_name = "SELECT * FROM products WHERE name = '" . $productname . "'";
                 $result = mysqli_query($conn, $sql_query_name);
                 $row = mysqli_fetch_array($result);
             }
-            if ($_POST['productid'] > 0) 
+            if ($_POST['productid'] > 0)
             {
                 $productid = $_POST['productid'];
                 $sql_query_id = "SELECT * FROM products WHERE id = '" . $productid . "'";
                 $result = mysqli_query($conn, $sql_query_id);
-                $row = mysqli_fetch_assoc($result);   
+                $row = mysqli_fetch_assoc($result);
             }
     ?>
                 <table class="product-table">
-                    <thead>    
+                    <thead>
                         <tr>
                             <th>Product name</th>
                             <th>Product id</th>
@@ -65,7 +65,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
                     </tbody>
                 </table>
     <?php
-        } 
+        }
     ?>
 
     <br/>
@@ -74,14 +74,14 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     <br/>
 
     <div class="go-back-container">
-        <?php 
+        <?php
         if (isset($_SESSION['role'])) {
             $role = $_SESSION['role'];
-        }   
+        }
         if ($role === "clerk") {
         ?>
             <a href="clerk_home.php">Go back</a>
-        <?php 
+        <?php
         } else if ($role === 'manager') {
         ?>
             <a href="manager_home.php">Go back</a>
@@ -91,6 +91,13 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     </div>
 
 </body>
+
+          <footer>
+          <p>Authors: G & M & S</p>
+          <p><a href="mailto:maccarigiulio@pm.me">Contact us</a></p>
+          </footer>
+
+
 
 </html>
 

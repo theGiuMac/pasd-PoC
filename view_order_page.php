@@ -28,6 +28,20 @@ function getProductById($products, $id)
     return null;
 }
 
+
+function getDeliveryDateById($id)
+{
+    $url = "https://rethink-supplier.herokuapp.com/delivery/";
+    $deliveryDates = performGET($url);
+    $count = 0;
+    while ($count != $deliveryDates) {
+        if ($id == $deliveryDates[$count]['order']) {
+            return $deliveryDates[$count]['date_time'];
+        }
+        $count++;
+    }
+}
+
 ?>
 <?php
 session_start();
@@ -72,6 +86,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             <?php echo \"<input style = 'display:none' name='order_id' value=\" . $orderId . \"/>\" ?>
             <button type=\"submit\">Confirm Order</button> 
             </form> ";
+        } else {
+            $delDate = getDeliveryDateById($orderId);
+            echo "<p>Delivery Date For This Order: " . $delDate . "</p>";
         }
         ?>
 

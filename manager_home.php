@@ -18,6 +18,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 
     <br>
     <br>
+    <a href="create_new_order.php">Create New Order</a>
     <a href="add_user_page.php"> Add a user </a>
     <a href="view_orders_page.php">View Orders</a>
     <a href="view_deliveries_page.php">View Deliveries</a>

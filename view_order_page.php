@@ -65,10 +65,16 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
         ?>
         <div class="container">
         </div>
-        <form method="post" action="confirm_order.php">
-            <?php echo "<input style = 'display:none' name='order_id' value=" . $orderId . "/>" ?>
-            <button type="submit">Confirm Order</button>
-        </form>
+        <!--        if th order has already been processed do now show confirm order button -->
+        <?php if ($_POST['is_processed'] != true) {
+            echo "
+        <form method=\"post\" action=\"confirm_order.php\">
+            <?php echo \"<input style = 'display:none' name='order_id' value=\" . $orderId . \"/>\" ?>
+            <button type=\"submit\">Confirm Order</button> 
+            </form> ";
+        }
+        ?>
+
     </div>
 
     <br>

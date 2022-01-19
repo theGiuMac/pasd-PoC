@@ -1,4 +1,5 @@
 <?php
+include "view_orders_page.php";
 function getDeliveries()
 {
     // Server url
@@ -49,7 +50,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
                 $count++;
             }
             ?>
-            ;
+
         </div>
     </div>
 

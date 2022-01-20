@@ -1,6 +1,4 @@
 <?php
-
-
 session_start();
 if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     // Server url
@@ -19,7 +17,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     } else {
         $decoded = json_decode($result, true);
         $_SESSION['order_id'] = $decoded['id'];
-        header("Location: issue_order_page.php");
+        $_SESSION['buyer'] = $decoded['buyer'];
+        $_SESSION['is_processed'] = $decoded['is_processed'];
     }
 } else {
     header("Location: ../index.php");

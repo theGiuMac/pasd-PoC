@@ -15,7 +15,7 @@ body {
 
 .issue-order-container,
 .login-container,
-.search-container {    
+.search-container {
     width: 600px;
     border: 3px solid rgb(177,142,142);
     padding: 20px;
@@ -28,7 +28,7 @@ h2 {
     margin-bottom: 40px;
 }
 
-input {    
+input {
     display: block;
     border: 2px solid #ccc;
     width: 50%;
@@ -72,16 +72,16 @@ h1 {
     color: rgb(134, 3, 3);
 }
 
-a {
-    float: right;
-    background: rgb(183, 225, 233);
-    padding: 10px 15px;
-    color: #fff;
-    border-radius: 10px;
-    margin-right: 10px;
-    border: none;
-    text-decoration: none;
-}
+/* a { */
+/*     float: right; */
+/*     background: rgb(183, 225, 233); */
+/*     padding: 10px 15px; */
+/*     color: #fff; */
+/*     border-radius: 10px; */
+/*     margin-right: 10px; */
+/*     border: none; */
+/*     text-decoration: none; */
+/* } */
 
 p {
     text-align: center;
@@ -179,5 +179,3 @@ img {
     font-weight: bold;
     color: #009879;
 }
-
-

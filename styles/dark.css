@@ -8,19 +8,96 @@ body {
     flex-direction: column;
 }
 
+html {
+    height: 100%;
+    margin: auto;
+    height: 2100px;
+    width: 1500px;
+    overflow-y: scroll;
+}
+
 * {
     font-family: "Fira Code";
     box-sizing: padding-box;
 }
+
+
 
 .logout {
     color: #CE2222;
     background-color: #FDFCFC;
 }
 
+footer {
+    position: relative;
+    top: 1550px;
+}
+
 .homepage {
-    width: 900px;
-    height: 600px;
+    height: 200px;
+    width: 875px;
+    position: absolute;
+    top: 10px;
+    left: 240px;
+    padding-bottom: 50px;
+}
+
+.chartBox {
+    position: relative;
+}
+
+.salesChart {
+    height: 500px;
+    width: 600px;
+    position: absolute;
+    top: -100px;
+    left: -600px;
+}
+
+.ordersChart {
+    height: 500px;
+    width: 600px;
+    position: absolute;
+    top: 500px;
+    left: -600px;
+}
+
+.productsTypeChart {
+    height: 500px;
+    width: 600px;
+    position: absolute;
+    top: -100px;
+    left: 80px;
+}
+
+.supplierTypeChart {
+    height: 500px;
+    width: 600px;
+    position: absolute;
+    top: 500px;
+    left: 80px;
+}
+
+.greeting {
+    height: 50px;
+    width: 250px;
+    position: absolute;
+    top: 150px;
+    left: 320px;
+    padding-bottom: 50px;
+}
+
+.datepicker {
+    position: relative;
+    top: 1200px;
+    left: -550px;
+}
+
+.datetimespicker {
+    width: 400px;
+    height: 14px;
+    font-size: 25px;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 /* The sidebar menu */
@@ -61,13 +138,14 @@ body {
 .view-deliveries-container,
 .login-container,
 .search-container {
-    width: 1500px;
+    width: 950px;
     hwight: 700px;
     border: 3px solid rgb(255, 0, 0);
     padding: 20px;
     /* background: linear-gradient(rgb(173,216,230), silver); */
     background-color: #000000;
     border-radius: 20px;
+    margin-left: -350px;
 
 }
 
@@ -89,7 +167,7 @@ input {
 label {
     color: #ffffff;
     font-size: 18px;
-    padding: 10px;
+    padding: 190px;
     text-align: center;
 }
 
@@ -118,7 +196,7 @@ button:hover {
 }
 
 h1 {
-    text-align: center;
+    text-align: left;
     color: rgb(134, 3, 3);
 }
 
@@ -142,6 +220,23 @@ a:hover {
     align-items: center;
     height: 200px;
     width: 350px;
+}
+
+td {
+    background-color: white;
+}
+
+.delivery-container {
+    display: flex;
+    overflow-x: auto;
+    position: relative;
+    top: 150px;
+}
+
+.delivery-homepage {
+    border: solid 2px #dddddd;
+    position: absolute;
+    right: 50px;
 }
 
 .product, .order, .delivery {

@@ -61,7 +61,7 @@ if (isset($_POST['order_id'])) {
         $count++;
     }
     curl_close($ch);
+    header("Location: ./view_orders_page.php");
 } else {
     header("Location: ../issue_order_page.php");
 }
-

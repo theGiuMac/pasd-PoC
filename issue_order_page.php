@@ -24,14 +24,31 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
         <!DOCTYPE html>
         <html lang="en">
 
+             <!-- Side Navigation -->
+             <div class="sidenav">
+             <a href="manager_home.php">Manager Homepage</a>
+             <hr>
+             <a href="create_order_page.php">Create Order</a>
+             <hr>
+             <a href="view_orders_page.php">View Orders</a>
+             <hr>
+             <a href="view_deliveries_page.php">View Deliveries</a>
+             <hr>
+             <a href="add_user_page.php">Add a user</a>
+             <hr>
+             <a href="search_page.php">Search a Product</a>
+             <hr>
+             <a class="logout" href="logout.php">Logout</a>
+             <hr>
+             </div>
+
+             <div class="main">
+
         <head>
-            <title>Manager Homepage</title>
+            <title>Issue Order</title>
             <link rel="stylesheet" type="text/css" href="./styles/dark.css">
         </head>
         <body>
-        <h1>Hello, <?php echo $_SESSION['username']; ?></h1>
-        <br>
-        <br>
         <form action="issue_order.php" method="post">
             <?php echo "<input style='display:none' name='order_id' value=" . $orderId . ">";
             ?>
@@ -74,19 +91,13 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
                 <button type="submit">Issue Order</button>
             </div>
         </form>
-        <br>
-        <br>
-        <a href="manager_home.php">Home Page </a>
-        <a href="add_user_page.php"> Add a user </a>
-        <a href="view_orders_page.php">View Orders</a>
-        <a href="view_deliveries_page.php">View Deliveries</a>
-        <br>
-        <a href="logout.php">Logout</a>
+
         </body>
                       <footer>
                   <p>Authors: G & M & S</p>
                   <p><a href="mailto:maccarigiulio@pm.me">Contact us</a></p>
                   </footer>
+        </div>
     </html>
     <?php
     } else {

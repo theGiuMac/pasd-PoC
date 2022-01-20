@@ -6,18 +6,38 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 <!DOCTYPE html>
 <html>
 
-        //TODO
-        <!-- Side Navigation -->
-        <div class="sidenav">
-        <a href="manager_home.php">Manager Homepage</a>
-        <hr>
-        <a href="view_deliveries_page.php">View Deliveries</a>
-        <hr>
-        <a href="add_user_page.php"> Add a user </a>
-        <hr>
-        <a href="logout.php">Logout</a>
-        <hr>
-        </div>
+
+<?php
+ if ($_SESSION['role'] == 'manager') {
+?>
+<!--Manager Side Navigation -->
+<div class="sidenav">
+  <a href="manager_home.php">Manager Homepage</a>
+  <hr>
+  <a href="create_order_page.php">Create Order</a>
+  <hr>
+  <a href="view_orders_page.php">View Orders</a>
+  <hr>
+  <a href="view_deliveries_page.php">View Deliveries</a>
+  <hr>
+  <a href="add_user_page.php"> Add a user </a>
+  <hr>
+  <a class="logout" href="logout.php">Logout</a>
+  <hr>
+</div>
+<?php
+ } else {
+?>
+<!-- Clerk Side Navigation -->
+<div class="sidenav">
+  <a href="clerk_home.php">Clerk Homepage</a>
+  <hr>
+  <a class="logout" href="logout.php">Logout</a>
+  <hr>
+</div>
+<?php
+        }
+?>
 
 <div class="main">
 
@@ -25,6 +45,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 <head>
     <title>Search page</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles/dark.css">
 </head>
 
 <body>
@@ -82,38 +103,13 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     <?php
         }
     ?>
-
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-
-    <div class="go-back-container">
-        <?php
-        if (isset($_SESSION['role'])) {
-            $role = $_SESSION['role'];
-        }
-        if ($role === "clerk") {
-        ?>
-            <a href="clerk_home.php">Go back</a>
-        <?php
-        } else if ($role === 'manager') {
-        ?>
-            <a href="manager_home.php">Go back</a>
-        <?php
-        }
-        ?>
-    </div>
-
 </body>
-
 </div>
 
-          <footer>
-          <p>Authors: G & M & S</p>
-          <p><a href="mailto:maccarigiulio@pm.me">Contact us</a></p>
-          </footer>
-
+<footer>
+  <p>Authors: G & M & S</p>
+  <p><a href="mailto:maccarigiulio@pm.me">Contact us</a></p>
+</footer>
 
 </html>
 

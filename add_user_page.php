@@ -13,11 +13,15 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
         <div class="sidenav">
         <a href="manager_home.php">Manager Homepage</a>
         <hr>
+        <a href="create_order_page.php">Create Order</a>
+        <hr>
         <a href="view_deliveries_page.php">View Deliveries</a>
         <hr>
         <a href="view_orders_page.php">View Orders</a>
         <hr>
-        <a href="logout.php">Logout</a>
+        <a href="search_page.php">Search a Product</a>
+        <hr>
+        <a class="logout" href="logout.php">Logout</a>
         <hr>
         </div>
 
@@ -27,12 +31,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     </head>
 
     <body>
-    <h1>Hello, <?php echo $_SESSION['username']; ?></h1>
-    <br>
-    <br>
     <div class="add-user-container">
         <form action="add_user.php" method="post"
-              style="width: 1000px; border: 1px solid #ffffff;  border-radius: 20px;">>
+              style="width: 800px; border: 20px solid #ffffff;  border-radius: 15px;">>
             <div class="add-user-container2">
                 <h2>ADD USER</h2>
                 <?php if (isset($_GET['error'])) { ?>
@@ -53,21 +54,15 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
                 </select>
                 <button type="submit">Add user</button>
             </div>
-
         </form>
     </div>
-    <br>
-    <br>
-    <a href="manager_home.php">Home Page</a>
-    <br>
-    <a href="logout.php">Logout</a>
     </body>
 
 
-                                                   <footer>
-                                                   <p>Authors: G & M & S</p>
-                                                   <p><a href="mailto:maccarigiulio@pm.me">Contact us</a></p>
-                                                   </footer>
+    <footer>
+      <p>Authors: G & M & S</p>
+      <p><a href="mailto:maccarigiulio@pm.me">Contact us</a></p>
+    </footer>
 
     </html>
 

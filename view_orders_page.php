@@ -23,15 +23,17 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     <div class="sidenav">
         <a href="manager_home.php">Manager Homepage</a>
         <hr>
+        <a href="create_order_page.php">Create Order</a>
+        <hr>
         <a href="view_deliveries_page.php">View Deliveries</a>
         <hr>
         <a href="add_user_page.php"> Add a user </a>
         <hr>
-        <a href="logout.php">Logout</a>
+        <a href="search_page.php">Search a Product</a>
+        <hr>
+        <a class="logout" href="logout.php">Logout</a>
         <hr>
     </div>
-
-    <h1>Hello, <?php echo $_SESSION['username']; ?></h1>
 
     <div class="main">
 
@@ -40,9 +42,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     </head>
 
     <body>
-    <br>
-    <br>
-
     <div class="view-order-container">
         <h2>Orders</h2>
 

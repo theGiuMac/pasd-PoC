@@ -19,6 +19,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
         $_SESSION['order_id'] = $decoded['id'];
         $_SESSION['buyer'] = $decoded['buyer'];
         $_SESSION['is_processed'] = $decoded['is_processed'];
+        header("Location: issue_order_page.php");
     }
 } else {
     header("Location: ../index.php");

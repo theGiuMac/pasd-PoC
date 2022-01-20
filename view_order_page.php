@@ -21,7 +21,7 @@ function getProductById($products, $id)
     $count = 0;
     while ($count != $products) {
         if ($id == $products[$count]['id']) {
-            return $products[$count]['name'];
+            return $products[$count];
         }
         $count++;
     }
@@ -85,21 +85,27 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             <?php echo "<h2>Detail Of Order: " . $orderId . "</h2>" ?>
             <?php
             $count = 1;
+            $total = 0;
+
             while ($count != sizeof($orderDetail) + 1) {
+                $product = getProductById($products, $orderDetail[$count - 1]['product']);
                 echo "<details style='color:white;'>";
                 echo "<summary>Item Number " . $count . "</summary>";
                 echo "<span>
                             <div>
-                                <p> Products's Name: " . getProductById($products, $orderDetail[$count - 1]['product']) . "</p>
+                                <p> Products's Name: " . $product['name'] . "</p>
                                 <p>  Amount: " . $orderDetail[$count - 1]['nr_of_products'] . "</p>
                             </div>
                         </span>";
                 echo "</details>";
+                $total += $orderDetail[$count - 1]['nr_of_products'] * $product['price_in_cents'];
                 $count++;
             }
             ?>
             <div class="container">
             </div>
+            <?php $total = $total / 100;
+            echo "<h4 style='color: white'>Total Price: € $total</h4>"; ?>
             <!--        if th order has already been processed do now show confirm order button -->
             <?php if ($_POST['is_processed'] != true) {
                 echo "

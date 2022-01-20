@@ -8,10 +8,7 @@
 
 
   <body>
-     <form name="payment-form" action="" method='post'>
-         <input style="padding-x:25px" type="number">Insert the amount to pay />
-         <button class="btn btn-primary btn-block" onclick="pay(100)">Pay 100 dollars.</button>
-         <button type='submit'>Pay</button>
+     <button class="btn btn-primary btn-block" onclick="pay(100)">Pay 100 dollars.</button>
      </form>
      </div>
      </div>
